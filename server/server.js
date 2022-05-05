@@ -3,6 +3,10 @@ const path = require('path');
 const cors = require('cors');
 const fs = require('fs');
 var bodyParser = require('body-parser');
+const login = require('./routes/login');
+const register = require('./routes/register');
+const dlogin = require('./routes/logindoctor');
+const dregister = require('./routes/registerdoctor');
 
 
 const app = express();
@@ -30,4 +34,8 @@ app.listen(PORT, () => console.log(`Server started on ${PORT}`));
 ;
 
 
-
+// Define routes
+app.use('/login', login);
+app.use('/register', register);
+app.use('/doctor/login', dlogin);
+app.use('/doctor/register', dregister);
