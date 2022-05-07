@@ -7,6 +7,8 @@ const login = require('./routes/login');
 const register = require('./routes/register');
 const dlogin = require('./routes/logindoctor');
 const dregister = require('./routes/registerdoctor');
+const auth = require('./middleware/auth');
+const profile = require('./routes/profile');
 
 
 const app = express();
@@ -39,3 +41,4 @@ app.use('/login', login);
 app.use('/register', register);
 app.use('/doctor/login', dlogin);
 app.use('/doctor/register', dregister);
+app.use('/profile', profile);
