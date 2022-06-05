@@ -33,6 +33,39 @@ const UserSchema = mongoose.Schema({
     // required: true,
   },
 
+  TimeSlot: Slot,
+  FirstName: {
+    type: String,
+  },
+  LastName: {
+    type: String,
+  },
+  Email: {
+    type: String,
+  },
+  Phone: {
+    type: String,
+  },
+  Age: {
+    type: Number,
+  },
+  Sex: {
+    type: String,
+  },
+  Recipt: {
+    type: String,
+    // required: true,
+  },
+  AppointmentMode: {
+    type: Number,
+    // required: true,
+    //choice physical or online
+  },
+  Symptoms: {
+    type: String,
+    // required: true,
+  },
+
 });
 
 module.exports = mongoose.model('appoinment', UserSchema);
