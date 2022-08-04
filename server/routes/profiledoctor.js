@@ -8,7 +8,7 @@ const Profile = require('../schemas/doctorProfile');
 // Load User Model
 const User = require('../schemas/doctor');
 
-// @route   GET api/doctor/profile
+// @route   GET api/profile
 // @desc    Get current users profile
 // @access  Private
 router.get('/', auth, (req, res) => {
@@ -26,7 +26,7 @@ router.get('/', auth, (req, res) => {
     .catch((err) => res.status(404).json(err));
 });
 
-// @route   GET api/doctor/profile/Email/:email
+// @route   GET api/profile/Email/:email
 // @desc    Get profile by email
 // @access  Public
 

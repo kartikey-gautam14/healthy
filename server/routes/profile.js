@@ -14,7 +14,6 @@ const User = require('../schemas/patient');
 router.get('/', auth, (req, res) => {
   const errors = {};
   // console.log(req.user);
-  console.log(req.user);
   Profile.findOne({ user: req.user })
     .populate('user', ['name', 'email'])
     .then((profile) => {
